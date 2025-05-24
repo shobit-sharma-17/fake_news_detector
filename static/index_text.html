@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {text-align: center;
+    color:#7689de;
+    }
+body{ background-image: url(../static/image_back.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat, repeat;
+      justify-content : center;
+    }
+input[type="text"] {
+    color = "white"
+                    }   
+button{ 
+} 
+.box{
+     text-align: center;
+    }
+</style>
+<title>Detecting Fake News with Python and Machine Learning</title>
+</head>
+<body>
+<form  action="/predict" method="POST">
+<div class="box">
+<h1> Detecting Fake News</h1>
+<input   style= "width:500px" placeholder = "Please Enter The News" /><br/>
+<button value="predict">Submit</button>
+<div/>
+</form>
+
+{% if pred == 1 %} 
+<p>True</p>
+    
+{% else pred == 0 %} 
+<p>False</p>
+{% endif %}
+</body>
+
+</html>
